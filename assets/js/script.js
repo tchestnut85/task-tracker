@@ -289,7 +289,7 @@ var dropTaskHandler = function(event) {
 var dragLeaveHandler = function(event) {
     var taskListEl = event.target.closest(".task-list");
     if (taskListEl) {
-        event.target.closest(."task-list").removeAttribute("style");
+        event.target.closest(".task-list").removeAttribute("style");
     }
 };
 
