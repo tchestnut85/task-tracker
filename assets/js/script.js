@@ -259,19 +259,17 @@ var dropTaskHandler = function(event) {
    
       var newStatus;
 
-      switch (statusType) {
-        case "tasks-to-do":
-          statusSelectEl.selectedIndex = 0;
-          break;
-        case "tasks-in-progress":
-          statusSelectEl.selectedIndex = 1;
-          break;
-        case "tasks-completed":
-          statusSelectEl.selectedIndex = 2;
-          break;
-        default:
-          console.log("Something went wrong!");
-      }
+        if (statusType === "tasks-to-do") {
+        statusSelectEl.selectedIndex = 0;
+    }
+    else if (statusType === "tasks-in-progress") {
+        statusSelectEl.selectedIndex = 1;
+    }
+    else if (statusType === "tasks-completed") {
+        statusSelectEl.selectedIndex = 2;
+    }
+    dropZoneEl.removeAttribute("style");
+    dropZoneEl.appendChild(draggableElement);
 
     
     //loop through tasks array to find and update the updated task's status
