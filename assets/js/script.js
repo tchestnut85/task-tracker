@@ -233,7 +233,7 @@ var taskStatusChangeHandler = function(event) {
 };
 
 var dragTaskHandler = function(event) {
-   if (event.target.maatches("li.task-item")) {
+   if (event.target.matches("li.task-item")) {
     var taskId = event.target.getAttribute("data-task-id");
    event.dataTransfer.setData("text/plain", taskId);
    // var getId = event.dataTransfer.getData("text/plain");
